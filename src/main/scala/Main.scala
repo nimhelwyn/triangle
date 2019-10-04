@@ -8,5 +8,7 @@ object Main extends App{
 
   val rootNode = reader.readIt(fileName)
 
+  val processTriangle = new ProcessTriangle
+
 
 }
