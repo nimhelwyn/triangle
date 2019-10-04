@@ -6,7 +6,7 @@ class ProcessTriangle() {
 
   def processRoutes(rootNode: Node, route: Route = Route(0, Nil)): List[Route] = {
 
-    if(rootNode.leftChild == None && rootNode.rightChild == None){
+    if(rootNode.leftChild.isEmpty && rootNode.rightChild.isEmpty){
       val finalRoute = route.copy(sum = route.sum + rootNode.value)
       routes = finalRoute :: routes
     }
@@ -18,9 +18,16 @@ class ProcessTriangle() {
     routes
   }
 
-  def searchMinPath = ???
+  def searchMinPath(routeList : List[Route]) = {
+    var minPath = routeList(0)
 
-  def printResult(route: Route) = {
+    for(route <- routeList){
+      if (route.sum < minPath.sum) minPath = route
+    }
+    minPath
+  }
+
+  def printResult(route: Route, rootNode: Node) = {
 
   }
 
