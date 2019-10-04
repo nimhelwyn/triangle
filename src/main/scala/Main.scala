@@ -12,11 +12,8 @@ object Main extends App{
 
   val allRoutes = processTriangle.processRoutes(rootNode)
 
-  allRoutes.foreach{
-    item => println(item)
-  }
-
   val minPath = processTriangle.searchMinPath(allRoutes)
 
-  println(processTriangle.printResult(minPath, rootNode))
+  print(processTriangle.printResult(minPath, rootNode))
+
 }

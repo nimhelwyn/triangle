@@ -33,20 +33,17 @@ class ProcessTriangle() {
     var node = rootNode
 
       for (path <- route.dir) {
-        if (node.leftChild.isEmpty && node.rightChild.isEmpty) {
-          println(" = " + route.sum)
-        }
-        else {
+        if (node.leftChild.nonEmpty && node.rightChild.nonEmpty) {
+          print(node.value + " + ")
           if (path == LeftDirection) {
-            print(node.value + " + ")
             node = node.leftChild.get
           }
           if (path == RightDirection) {
-            print(node.value + " + ")
             node = node.rightChild.get
           }
         }
       }
+    println(node.value + " = " + route.sum)
     }
 
 }
