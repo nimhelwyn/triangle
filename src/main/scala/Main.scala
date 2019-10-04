@@ -1,5 +1,12 @@
+package main
 
+object Main extends App{
 
-class Main {
+  val fileName = args(0)
+
+  val reader = new ReadFile
+
+  reader.readIt(fileName)
+
 
 }
