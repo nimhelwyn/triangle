@@ -6,7 +6,8 @@ object Main extends App{
 
   val reader = new ReadFile
 
-  reader.readIt(fileName)
+  val lines = reader.readIt(fileName)
+
 
 
 }
